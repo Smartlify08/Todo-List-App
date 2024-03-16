@@ -229,19 +229,6 @@ class UI {
     const themeToggler = document.querySelector("[data-theme-toggler]");
   }
 }
-const body = document.body;
-const themeToggler = document.querySelectorAll(".theme-toggler");
-themeToggler.forEach((btn) => {
-  console.log(btn);
-  btn.addEventListener("click", () => {
-    if (body.classList.contains("dark")) {
-      console.log(true);
-      body.classList.remove("dark", "bg-VeryDarkBlue");
-    } else {
-      body.classList.add("bg-VeryDarkBlue", "dark");
-    }
-  });
-});
 
 class StoreTodos {
   static addTodo(todo) {
@@ -337,4 +324,16 @@ document.addEventListener("DOMContentLoaded", () => {
   UI.displayRemainingItems();
 });
 
-// Theme toggling
+const body = document.body;
+const themeToggler = document.querySelectorAll(".theme-toggler");
+themeToggler.forEach((btn) => {
+  console.log(btn);
+  btn.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+      console.log(true);
+      body.classList.remove("dark", "bg-VeryDarkBlue");
+    } else {
+      body.classList.add("bg-VeryDarkBlue", "dark");
+    }
+  });
+});
