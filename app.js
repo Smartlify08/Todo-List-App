@@ -177,6 +177,7 @@ class UI {
         text.parentElement.classList.add("hidden");
       } else {
         text.parentElement.classList.add("flex");
+        text.parentElement.classList.remove("hidden");
       }
     });
   }
